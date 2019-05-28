@@ -1,0 +1,19 @@
+{
+  "name": "k8mvc-visitor-view-controller",
+  "version": "0.0.1",
+  "description": "Controller for Visitors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digi3colin/k8mvc-visitor-view-controller.git"
+  },
+  "author": "Shiba Komino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digi3colin/k8mvc-visitor-view-controller/issues"
+  },
+  "homepage": "https://github.com/digi3colin/k8mvc-visitor-view-controller#readme"
+}
