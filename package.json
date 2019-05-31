@@ -1,6 +1,6 @@
 {
   "name": "k8mvc-visitor-view-controller",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "Controller for Visitors",
   "main": "index.js",
   "scripts": {

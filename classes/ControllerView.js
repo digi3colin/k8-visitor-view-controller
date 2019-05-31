@@ -1,14 +1,14 @@
 const K8 = require('k8mvc');
 
 const Controller = K8.require('Controller');
-const ControllerMixinView = K8.require('controller-mixin/View');
+const ControllerMixinMultiDomainThemeView = K8.require('controller-mixin/MultiDomainThemeView');
 
 class ControllerView extends Controller{
   constructor(request, response){
     super(request, response);
     this.tpl = null;
 
-    this.addMixin(this.mixinView = new ControllerMixinView(this));
+    this.addMixin(this.mixinView = new ControllerMixinMultiDomainThemeView(this));
   }
 }
 
