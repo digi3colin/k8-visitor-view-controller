@@ -8,7 +8,7 @@ class ControllerView extends Controller{
     super(request, response);
     this.tpl = null;
 
-    this.addMixin(this.mixinView = new ControllerMixinMultiDomainThemeView(this));
+    this.addMixin(new ControllerMixinMultiDomainThemeView(this));
   }
 }
 

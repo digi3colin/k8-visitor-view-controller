@@ -16,24 +16,21 @@ class ControllerORMView extends Controller{
     };
 
     this.addMixin(new ControllerMixinMultiDomainDB(this));
-    this.addMixin(this.mixinORM = new ControllerMixinORM(this));
-    this.addMixin(this.mixinView = new ControllerMixinMultiDomainThemeView(this));
-    this.addMixin(this.mixinORMReadByHandle = new ControllerMixinORMReadByHandle(this));
+    this.addMixin(new ControllerMixinORM(this));
+    this.addMixin(new ControllerMixinMultiDomainThemeView(this));
+    this.addMixin(new ControllerMixinORMReadByHandle(this));
   }
 
   action_index(){
-    const instances = this.mixinORM.action_index();
-    this.tpl = this.mixinView.getView(this.templates.index, {instances : instances});
+    this.tpl = this.getView(this.templates.index, {instances : this.instances});
   }
 
   action_read(){
-    const instance = this.mixinORM.action_read();
-    this.tpl = this.mixinView.getView(this.templates.read, {instance: instance});
+    this.tpl = this.getView(this.templates.read, {instance: this.instance});
   }
 
   action_read_by_handle(){
-    const instance = this.mixinORMReadByHandle.action_read_by_handle();
-    this.tpl = this.mixinView.getView(this.templates.read, {instance: instance});
+    this.tpl = this.getView(this.templates.read, {instance: this.instance});
   }
 }
 
