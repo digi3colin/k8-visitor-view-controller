@@ -1,4 +1,4 @@
-const K8 = require('k8mvc');
+const {K8} = require('k8mvc');
 
 const Controller = K8.require('Controller');
 const ControllerMixinMultiDomainThemeView = K8.require('controller-mixin/MultiDomainThemeView');
